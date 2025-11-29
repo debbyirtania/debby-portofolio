@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth Provision Mapping | Project Detail</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styling specific to detail page */
+    #detail p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    #detail ul {
+      margin-left: 25px;
+      margin-top: 12px;
+      margin-bottom: 28px;
+    }
+
+    #detail ul li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    #detail ul li::marker {
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    hr {
+      margin: 45px 0;
+      border: 0;
+      border-top: 1px solid #dcdcdc;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Mapping and Profiling Youth Provision and Need Across England</h1>
+      <p>Detailed Project Summary & Insights</p>
+
+      <div class="cta-buttons">
+        <a class="btn-outline" href="index.html">⬅ Back to Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="detail" style="max-width:900px;margin:auto;padding:60px 30px;">
+
+    <h2>Project Overview</h2>
+
+    <p>This project maps where youth provision exists across England and identifies areas where youth need remains unmet. Because national datasets do not currently record the location of youth provision or its relationship to local need, a methodological framework was developed to create a clearer national picture.</p>
+
+    <p>Using publicly available data from the Charity Commission and Companies House, youth-related organisations were identified through filtering assumptions and a consensus ranking approach, as youth provision is not explicitly labelled in the registers.</p>
+
+    <p>Youth need was measured using the Income Deprivation Affecting Children Index (IDACI) and Anti-Social Behaviour (ASB) rates, which were combined into a Youth Need Index. Levels of provision were then compared against need to calculate an unmet youth need score at the Middle Layer Super Output Area (MSOA) level, enabling spatial analysis of disparity between need and provision.</p>
+
+    <hr>
+
+    <h3>Key Findings</h3>
+    <ul>
+      <li><strong>20,000+ organisations</strong> were identified as likely providers of youth services, including charities and community interest companies.</li>
+      <li><strong>77.5% of MSOAs</strong> have at least one youth-related organisation, while <strong>2.1%</strong> have no provision despite serving populations of over 1,000 young people.</li>
+      <li>Urban areas such as <strong>Blackpool</strong> and <strong>Redcar & Cleveland</strong> show the highest levels of unmet youth need, combining high deprivation and high ASB rates with limited provision.</li>
+      <li>Youth provision appears to align more strongly with <strong>Anti Social Behavior</strong> than deprivation, suggesting it responds more to social risk than structural disadvantage.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Mapping Output</h3>
+    <img src="Map.png" alt="Map of Youth Provision" 
+style="width:60%; display:block; margin:25px auto; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,0.12);">
+
+<p>Spatial distribution of unmet youth need levels (darker shades = higher unmet
+youth need)</p>
+
+    <hr>
+    <h3>Tools & Methods</h3>
+    <ul>
+    <li>Python (Pandas, NumPy, Matplotlib) and Tableau</li>
+    <li>Text matching using fuzzy matching techniques (RapidFuzz)</li>
+    <li>Borda Count — Rank Aggregation for consensus scoring</li>
+    <li>Clustering analysis — K-Means and Gaussian Mixture Models (GMM)</li>
+    </ul>
+
+    <hr>
+
+    <h3>Links</h3>
+    <p><a href="https://public.tableau.com/app/profile/irtania.ismira.dewi/viz/MappingYouthProvisionandNeedAcrossEngland/YouthProvisionSummary" target="_blank">Tableau Dashboard</a> &nbsp;|&nbsp; <a href="https://github.com/debbyirtania/Mapping-Youth-Provision.git" target="_blank">GitHub Repository</a></p>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Irtania Ismira Dewi</p>
+  </footer>
+
+</body>
+</html>
